@@ -14,10 +14,19 @@ class App extends Component {
     };
 
     this.searchEmoji = this.searchEmoji.bind(this);
+    this.copyToClipboard = this.copyToClipboard.bind(this);
   }
 
   searchEmoji = (e) => {
     this.setState({ inputValue: e.target.value });
+  };
+
+  copyToClipboard = (title, symbol) => {
+    navigator.clipboard.writeText(symbol);
+    this.setState({ title: title });
+    setTimeout(() => {
+      this.setState({ title: "" });
+    }, 4000);
   };
 
   render() {
@@ -64,6 +73,8 @@ class App extends Component {
                     className="card emojiCard  m-3   card-columns mx-auto d-flex justify-content-center "
                     data-toggle="tooltip"
                     data-placement="bottom"
+                    title="Click here to Copy"
+                    onClick={() => this.copyToClipboard(el.title, el.symbol)}
                   >
                     <div className="emoji">
                       <span
@@ -72,6 +83,9 @@ class App extends Component {
                       >
                         {el.symbol}
                       </span>
+                      {this.state.title === el.title && (
+                        <p className="fade-in ">Copied!</p>
+                      )}
                     </div>
                   </div>
                 );
