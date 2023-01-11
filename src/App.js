@@ -26,6 +26,8 @@ class App extends Component {
         <Navbar />
         <div className="container ">
           <h1 className="heading  pb-5">🦄 Emoji Search App</h1>
+
+          {/* Search Bar */}
           <div className="col-md-6 mb-4 mx-auto">
             <div className="input-group md-form form-sm form-2 pl-0">
               <div className="input-group-append">
@@ -46,6 +48,34 @@ class App extends Component {
                 aria-label="Search"
               ></input>
             </div>
+          </div>
+
+          {/* Emoji Container */}
+          <div className="row mx-auto ">
+            {this.state.emojiList
+              .filter((value) => {
+                return value.keywords
+                  .toLowerCase()
+                  .includes(this.state.inputValue.toLowerCase());
+              })
+              .map((el) => {
+                return (
+                  <div
+                    className="card emojiCard  m-3   card-columns mx-auto d-flex justify-content-center "
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                  >
+                    <div className="emoji">
+                      <span
+                        className="emoji"
+                        ref={(copyEmoji) => (this.copyEmoji = copyEmoji)}
+                      >
+                        {el.symbol}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </React.Fragment>
