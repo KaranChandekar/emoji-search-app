@@ -23,13 +23,19 @@ To level up myself in React:)
 
 ## Screenshots
 
+![emoji-search](https://user-images.githubusercontent.com/93200960/214320076-a8596ce8-09d6-4d23-98c2-67829b263077.png)
+
 <br />
 
-After searching for an emoji, UI looks like:
+After searching for an emoji:
+
+![emoji-search1](https://user-images.githubusercontent.com/93200960/214320156-8f600a50-8fba-4f7b-99ea-3a49afa005b9.png)
 
 <br />
 
 After clicking on an emoji, it copies in clipboard:
+
+![emoji-search2](https://user-images.githubusercontent.com/93200960/214320256-52f3c903-97c0-4b3d-a4be-ad39a9418ef7.png)
 
 <br />
 
