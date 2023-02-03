@@ -3,7 +3,7 @@
 An Emoji search app created using react.js -
 [Take a look](https://searchmyemoji.netlify.app/)
 
-![Practice](https://img.shields.io/badge/Practice-REACT/HTML/CSS/JS-orange.svg)
+![Practice](https://img.shields.io/badge/Practice-ReactJs-blue.svg)
 
 ## Description
 
