@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import EmojiList from "./emojiList.json";
-import "./App.css";
-import Navbar from "./Components/Navbar";
+import React, { Component } from 'react';
+import EmojiList from './emojiList.json';
+import './App.css';
+import Navbar from './Components/Navbar';
 
 class App extends Component {
   constructor(props) {
@@ -9,8 +9,8 @@ class App extends Component {
 
     this.state = {
       emojiList: EmojiList,
-      inputValue: "",
-      title: "",
+      inputValue: '',
+      title: '',
     };
 
     this.searchEmoji = this.searchEmoji.bind(this);
@@ -25,7 +25,7 @@ class App extends Component {
     navigator.clipboard.writeText(symbol);
     this.setState({ title: title });
     setTimeout(() => {
-      this.setState({ title: "" });
+      this.setState({ title: '' });
     }, 4000);
   };
 
